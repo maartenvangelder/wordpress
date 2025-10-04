@@ -9,7 +9,7 @@ use Verthe\PostTypes;
  * the main composer.json.
  */
 $includes = [
-    'lib/Grrr/Utils',
+    'lib/Verthe/Utils',
     'lib/Sage',
 ];
 foreach ($includes as $directory) {

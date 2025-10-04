@@ -1,6 +1,6 @@
 <?php
 
-use Grrr\Utils;
+use Verthe\Utils;
 use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
 

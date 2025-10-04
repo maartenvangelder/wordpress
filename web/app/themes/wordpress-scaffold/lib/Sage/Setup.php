@@ -21,7 +21,7 @@ function setup() {
     load_theme_textdomain('sage', get_template_directory() . '/languages/sage');
 
     // Custom theme translations
-    load_theme_textdomain('grrr', get_template_directory() . '/languages/grrr');
+    load_theme_textdomain('verthe', get_template_directory() . '/languages/verthe');
 
     // Enable plugins to manage the document title
     // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
@@ -116,7 +116,7 @@ function display_sidebar() {
  * Theme assets
  */
 function assets() {
-    wp_enqueue_style('grrr/css', Assets\asset_path('styles/base.css'), false, null);
+    wp_enqueue_style('verthe/css', Assets\asset_path('styles/base.css'), false, null);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -128,6 +128,6 @@ add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
  * Admin assets
  */
 function admin_assets() {
-    wp_enqueue_style('grrr/css', Assets\asset_path('styles/admin.css'), false, null);
+    wp_enqueue_style('verthe/css', Assets\asset_path('styles/admin.css'), false, null);
 }
 add_action('admin_enqueue_scripts', __NAMESPACE__ . '\\admin_assets');

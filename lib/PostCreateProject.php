@@ -10,7 +10,7 @@ namespace Verthe\Root;
  * @author Ramiro Hammen <ramiro@grrr.nl>
  */
 use Composer\Script\Event;
-use Grrr\Root\Util\StringUtil as S;
+use Verthe\Root\Util\StringUtil as S;
 
 class PostCreateProject
 {
