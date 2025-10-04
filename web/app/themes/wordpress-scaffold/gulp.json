@@ -9,7 +9,6 @@
   "tasks": {
     "copy": [
       "assets/fonts/**/*",
-      "assets/images/favicon.ico",
       "assets/scripts/vendor/**/*.js"
     ],
     "icons": {

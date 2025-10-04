@@ -1,5 +1,5 @@
 <?php
-namespace Grrr\Root\Util;
+namespace Verthe\Root\Util;
 
 class StringUtil {
     /**

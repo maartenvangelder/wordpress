@@ -1,7 +1,7 @@
 <?php
 
 use Roots\Sage\Assets;
-use Grrr\Utils;
+use Verthe\Utils;
 
 ?>
 <header class="site-header" role="banner">

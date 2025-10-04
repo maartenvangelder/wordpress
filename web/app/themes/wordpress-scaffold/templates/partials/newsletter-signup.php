@@ -1,6 +1,6 @@
 <?php
 
-use Grrr\Utils;
+use Verthe\Utils;
 
 $action = get_rest_url(null, 'grrr/v1/newsletter/subscribe');
 

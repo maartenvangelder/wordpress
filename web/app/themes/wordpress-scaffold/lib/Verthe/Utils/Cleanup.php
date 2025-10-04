@@ -1,6 +1,6 @@
 <?php
 
-namespace Grrr\Utils;
+namespace Verthe\Utils;
 
 /**
  * Remove generator, rsd and wlw

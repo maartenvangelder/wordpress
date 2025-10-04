@@ -1,6 +1,6 @@
 <?php
 
-use Grrr\Utils;
+use Verthe\Utils;
 
 ?>
 <header class="page-header">

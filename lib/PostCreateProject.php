@@ -1,5 +1,5 @@
 <?php
-namespace Grrr\Root;
+namespace Verthe\Root;
 
 /**
  * PostCreateProject
@@ -153,15 +153,15 @@ class PostCreateProject
             ],
             'admin_user' => [
                 'question' => 'What will be the admin\'s username?',
-                'default' => 'grrr'
+                'default' => 'verthe'
             ],
             'admin_email' => [
                 'question' => 'What will be the admin\'s email?',
-                'default' => 'wordpress@grrr.nl'
+                'default' => 'mail@maartenvangelder.nl'
             ],
             'admin_password' => [
                 'question' => 'Please provide the admin\'s password',
-                'default' => 'secret',
+                'default' => 'secret1234#!',
                 'type' => 'password'
             ]
         ];
@@ -188,7 +188,7 @@ class PostCreateProject
             ],
             'DB_PREFIX' => [
                 'question' => 'Database prefix (without trailing `_`)',
-                'default' => 'grrr',
+                'default' => 'mvg',
                 'validator' => function($value) {
                     if (empty($value)) {
                         throw new \Exception("Value is required");
@@ -219,15 +219,15 @@ class PostCreateProject
             ],
             'THEME_URI' => [
                 'question' => 'What is your Theme URI',
-                'default' => 'https://grrr.nl'
+                'default' => 'https://maartenvangelder.nl'
             ],
             'AUTHOR' => [
                 'question' => 'What is the Author\'s name',
-                'default' => 'Grrr'
+                'default' => 'Maarten van Gelder'
             ],
             'AUTHOR_URI' => [
                 'question' => 'What is the Author\'s URI',
-                'default' => 'https://grrr.nl'
+                'default' => 'https://maartenvangelder.nl'
             ],
             'TEXT_DOMAIN' => [
                 'question' => 'What is your theme\'s textdomain',

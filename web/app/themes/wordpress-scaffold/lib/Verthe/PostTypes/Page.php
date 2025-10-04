@@ -1,6 +1,6 @@
 <?php
 
-namespace Grrr\PostTypes;
+namespace Verthe\PostTypes;
 
 class Page {
 

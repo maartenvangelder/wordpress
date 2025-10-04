@@ -1,7 +1,7 @@
 <?php
 
 use Roots\Sage\Assets;
-use Grrr\Utils;
+use Verthe\Utils;
 
 ?>
 <footer class="site-footer" role="contentinfo">

@@ -1,9 +1,9 @@
 <?php
 
-namespace Grrr\Utils;
+namespace Verthe\Utils;
 
 use Roots\Sage\Assets;
-use Grrr\Templates;
+use Verthe\Templates;
 
 /**
  * SVG helper

@@ -1,6 +1,6 @@
 <?php
 
-namespace Grrr\MailingListServiceProvider;
+namespace Verthe\MailingListServiceProvider;
 
 interface MailingListServiceProvider {
 

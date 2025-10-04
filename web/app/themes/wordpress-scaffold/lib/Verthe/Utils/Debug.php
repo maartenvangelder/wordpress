@@ -1,6 +1,6 @@
 <?php
 
-namespace Grrr\Utils;
+namespace Verthe\Utils;
 
 /**
  * Enqueued scripts inspection, turn on when debugging

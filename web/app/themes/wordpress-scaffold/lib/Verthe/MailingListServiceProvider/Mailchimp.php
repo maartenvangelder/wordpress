@@ -1,6 +1,6 @@
 <?php
 
-namespace Grrr\MailingListServiceProvider;
+namespace Verthe\MailingListServiceProvider;
 
 use \DrewM\MailChimp\MailChimp as MailChimpAPI;
 

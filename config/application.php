@@ -1,6 +1,10 @@
 <?php
 
-use Grrr\Root;
+use Verthe\Root;
+use function Env\env;
+
+// USE_ENV_ARRAY + CONVERT_* + STRIP_QUOTES
+Env\Env::$options = 31;
 
 /** @var string Directory containing all of the site's files */
 $root_dir = dirname(__DIR__);
@@ -16,17 +20,27 @@ if (!defined('ROOT_DIR')) {
 $webroot_dir = $root_dir . '/web';
 
 /**
- * Expose global env() function from oscarotero/env
- */
-Env::init();
-
-/**
  * Use Dotenv to set required environment variables and load .env file in root
+ * .env.local will override .env if it exists
  */
-$dotenv = new Dotenv\Dotenv($root_dir);
 if (file_exists($root_dir . '/.env')) {
+    $env_files = file_exists($root_dir . '/.env.local')
+        ? ['.env', '.env.local']
+        : ['.env'];
+
+    $repository = Dotenv\Repository\RepositoryBuilder::createWithNoAdapters()
+        ->addAdapter(Dotenv\Repository\Adapter\EnvConstAdapter::class)
+        ->addAdapter(Dotenv\Repository\Adapter\PutenvAdapter::class)
+        ->immutable()
+        ->make();
+
+    $dotenv = Dotenv\Dotenv::create($repository, $root_dir, $env_files, false);
     $dotenv->load();
-    $dotenv->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD', 'WP_HOME', 'WP_SITEURL']);
+
+    $dotenv->required(['WP_HOME', 'WP_SITEURL']);
+    if (!env('DATABASE_URL')) {
+        $dotenv->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD']);
+    }
 }
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Grrr\Acf;
+namespace Verthe\Acf;
 
 class Setup {
 

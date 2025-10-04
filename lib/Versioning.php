@@ -1,6 +1,6 @@
 <?php
 
-namespace Grrr\Root;
+namespace Verthe\Root;
 
 class Versioning {
 

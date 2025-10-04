@@ -1,7 +1,7 @@
 <?php
 
-use Grrr\Acf;
-use Grrr\PostTypes;
+use Verthe\Acf;
+use Verthe\PostTypes;
 
 /**
  * We include function-only files (non-PSR-4 autoloadable, they're not classes) this way,
@@ -43,4 +43,4 @@ try {
 /**
  * API
  */
-(new \Grrr\API\Newsletter)->init();
+(new \Verthe\API\Newsletter)->init();

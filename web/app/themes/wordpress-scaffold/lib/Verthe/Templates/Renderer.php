@@ -1,6 +1,6 @@
 <?php
 
-namespace Grrr\Templates;
+namespace Verthe\Templates;
 
 class Renderer {
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Grrr\API;
+namespace Verthe\API;
 
 use Garp\Functional as f;
-use Grrr\MailingListServiceProvider\Mailchimp;
+use Verthe\MailingListServiceProvider\Mailchimp;
 
 /**
  * [Newsletter]

@@ -1,5 +1,5 @@
 <?php
-namespace Grrr\Root\Util;
+namespace Verthe\Root\Util;
 use Composer\Composer;
 use Dotenv\DotEnv as Env;
 

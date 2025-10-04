@@ -1,9 +1,9 @@
 <?php
 
-use Grrr\Utils;
-use Grrr\Templates;
-use Grrr\PostTypes\Example;
-use Grrr\Acf\FlexibleContent;
+use Verthe\Utils;
+use Verthe\Templates;
+use Verthe\PostTypes\Example;
+use Verthe\Acf\FlexibleContent;
 
 $examples = (new Example)->get_posts(10);
 

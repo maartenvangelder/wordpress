@@ -1,6 +1,6 @@
 <?php
 
-namespace Grrr\Acf\FlexibleContent;
+namespace Verthe\Acf\FlexibleContent;
 
 class Blocks {
 
