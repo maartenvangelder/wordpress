@@ -1,0 +1,39 @@
+# Dotenv
+.env
+!.env.template
+
+# Composer
+/vendor
+
+# WordPress
+/web/wp
+
+# Uploads & Upgrade
+/web/app/upgrade
+/web/app/uploads/*
+!/web/app/uploads/.gitkeep
+
+# Plugins
+/web/app/plugins/*
+!/web/app/plugins/.gitkeep
+/web/app/mu-plugins/*/
+!/web/app/mu-plugins/.gitkeep
+
+# Plugins not available on Packagist/WPackagist
+!/web/app/plugins/advanced-custom-fields-pro
+!/web/app/plugins/acf-sync
+
+# Cache
+/web/app/cache/*
+!/web/app/cache/.gitkeep
+
+# W3TC (managed on server in shared folder)
+/web/app/db.php
+/web/app/advanced-cache.php
+/web/app/w3tc-config/
+
+# Other
+.DS_Store
+yarn-error.log
+/log
+/VERSION

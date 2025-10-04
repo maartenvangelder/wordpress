@@ -1,0 +1,88 @@
+{
+  "app": {
+    "domain": "%WP_HOME%"
+  },
+  "paths": {
+    "src": "assets",
+    "dist": "assets/build"
+  },
+  "tasks": {
+    "copy": [
+      "assets/fonts/**/*",
+      "assets/images/favicon.ico",
+      "assets/scripts/vendor/**/*.js"
+    ],
+    "icons": {
+      "src": "assets/images/icons/**/*.svg",
+      "dist": "assets/build/images"
+    },
+    "images": {
+      "src": "assets/images/**/*.{png,gif,jpg,jpeg,svg}",
+      "dist": "assets/build/images"
+    },
+    "javascript": {
+      "src": "assets/scripts/**/*.js",
+      "dist": "assets/build/scripts",
+      "main": "assets/scripts/main.js",
+      "bundles": [
+        {
+          "bundle": "main.js",
+          "watch": true,
+          "babel": {
+            "plugins": [
+              "@babel/plugin-proposal-object-rest-spread"
+            ],
+            "presets": [
+              [
+                "@babel/preset-env", {
+                  "targets": {
+                    "browsers": [
+                      "> 0.25%",
+                      "ie >= 9"
+                    ]
+                  }
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "javascript:vendor": [
+      {
+        "src": [
+          "node_modules/fg-loadjs/loadJS.js",
+          "node_modules/svg4everybody/dist/svg4everybody.js"
+        ],
+        "dist": "assets/build/scripts/vendor"
+      },
+      {
+        "src": [
+          "node_modules/@babel/polyfill/dist/polyfill.js"
+        ],
+        "dist": "assets/build/scripts/vendor",
+        "bundle": "babel-polyfill.js"
+      }
+    ],
+    "sass": {
+      "src": "assets/styles/**/*.scss",
+      "dist": "assets/build/styles",
+      "main": [
+        "assets/styles/base.scss",
+        "assets/styles/admin.scss"
+      ]
+    },
+    "revision": {
+      "manifest": {
+        "directory": "assets/build",
+        "file": "assets.json"
+      }
+    },
+    "watch": {
+      "files": [
+        "*.php",
+        "{templates,lib}/**/*.php"
+      ]
+    }
+  }
+}

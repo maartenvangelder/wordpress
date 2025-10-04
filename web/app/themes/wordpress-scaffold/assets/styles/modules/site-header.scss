@@ -1,0 +1,17 @@
+.site-header {
+
+}
+.site-header__inner {
+    padding: 20px;
+}
+
+/**
+ * Logo
+ */
+.site-header__logo {
+    display: inline-block;
+}
+.site-header__logo > svg {
+    width: 100px; height: 36px;
+    fill: $primary-color;
+}

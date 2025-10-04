@@ -1,0 +1,89 @@
+{
+  "name": "grrr-amsterdam/wordpress-scaffold",
+  "type": "project",
+  "description": "A modern WordPress scaffold",
+  "license": "BSD-3-Clause",
+  "homepage": "https://grrr.nl/",
+  "authors": [
+    {
+      "name": "Ramiro Hammen",
+      "email": "ramiro@grrr.nl"
+    },
+    {
+      "name": "Koen Schaft",
+      "email": "koen@grrr.nl"
+    }
+  ],
+  "config": {
+    "preferred-install": "dist"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "composer/installers": "^1.2.0",
+    "vlucas/phpdotenv": "^2.0.1",
+    "johnpbloch/wordpress": "^4.9.0",
+    "oscarotero/env": "^1.0",
+    "roots/wp-password-bcrypt": "^1.0.0",
+    "wikimedia/composer-merge-plugin": "^1.4",
+    "roots/soil": "^3.7",
+    "sentry/sentry": "^1.7",
+    "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "^2.0",
+    "wpackagist-plugin/admin-menu-editor": "^1.6",
+    "wpackagist-plugin/ajax-thumbnail-rebuild": "^1.12",
+    "wpackagist-plugin/amazon-s3-and-cloudfront": "^2.0",
+    "wpackagist-plugin/thumbnail-upscale": "^1.1",
+    "wpackagist-plugin/w3-total-cache": "^0.9.5.4",
+    "wpackagist-plugin/wordpress-seo": "^9.0",
+    "wpackagist-plugin/wp-ses": "^0.8",
+    "wpackagist-plugin/classic-editor": "^1.3",
+    "grrr-amsterdam/garp-functional": "^2.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.0",
+    "wp-cli/wp-cli": "^2.0",
+    "wp-cli/core-command": "^2.0",
+    "wp-cli/entity-command": "^2.0",
+    "wp-cli/extension-command": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grrr\\Root\\" : "lib/"
+    }
+  },
+  "extra": {
+    "merge-plugin": {
+      "include": [
+        "web/app/themes/*/composer.json"
+      ],
+      "recurse": true,
+      "replace": false,
+      "ignore-duplicates": false,
+      "merge-dev": false,
+      "merge-extra": false,
+      "merge-extra-deep": false,
+      "merge-scripts": false
+    },
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "Grrr\\Root\\PostCreateProject::setup"
+    ],
+    "test": [
+      "vendor/bin/phpcs"
+    ]
+  }
+}

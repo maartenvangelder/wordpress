@@ -1,0 +1,6 @@
+.site-footer {
+    background: $primary-color; color: $white;
+}
+.site-footer__inner {
+    @include row; @include content;
+}
