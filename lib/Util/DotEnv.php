@@ -17,7 +17,7 @@ class DotEnv
 
     public function get($key)
     {
-        (new Env($this->_rootPath))->load();
+        Env::createImmutable($this->_rootPath)->load();
         return getenv($key);
     }
 
