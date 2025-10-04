@@ -51,8 +51,6 @@
     "wpackagist-plugin/w3-total-cache": "^2",
     "wpackagist-plugin/wordpress-seo": "^26.0",
     "wpackagist-plugin/classic-editor": "^1.6",
-    "wpackagist-plugin/complianz-gdpr": "7.4.2",
-    "wpackagist-plugin/simple-local-avatars": "^2.8",
     "wpackagist-plugin/another-simple-image-optimizer": "^0.3.0"
   },
   "require-dev": {

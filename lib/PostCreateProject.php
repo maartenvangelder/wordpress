@@ -198,7 +198,7 @@ class PostCreateProject
             ],
             'WP_HOME' => [
                 'question' => 'What will be your local site url? (incl. `http://`)',
-                'default' => NULL,
+                'default' => 'http://' . str_replace('-', '_', static::_composeProjectName() . '.localhost')
                 'validator' => function($value) {
                     if (empty($value)) {
                         throw new \Exception('You need to give an url');

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "72665dd052555853b39275f3c30f3345",
+    "content-hash": "2a995229213f4e794379c922c377a465",
     "packages": [
         {
             "name": "composer/installers",
@@ -1405,42 +1405,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/classic-editor/"
-        },
-        {
-            "name": "wpackagist-plugin/complianz-gdpr",
-            "version": "7.4.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/complianz-gdpr/",
-                "reference": "tags/7.4.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/complianz-gdpr.7.4.2.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/complianz-gdpr/"
-        },
-        {
-            "name": "wpackagist-plugin/simple-local-avatars",
-            "version": "2.8.5",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/simple-local-avatars/",
-                "reference": "tags/2.8.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/simple-local-avatars.2.8.5.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/simple-local-avatars/"
         },
         {
             "name": "wpackagist-plugin/w3-total-cache",
