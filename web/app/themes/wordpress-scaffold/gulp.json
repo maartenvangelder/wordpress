@@ -1,6 +1,6 @@
 {
-  "app": {
-    "domain": "%WP_HOME%"
+  "dotenv": {
+    "file": "../../../../.env"
   },
   "paths": {
     "src": "assets",
@@ -9,6 +9,7 @@
   "tasks": {
     "copy": [
       "assets/fonts/**/*",
+      "assets/videos/**/*",
       "assets/scripts/vendor/**/*.js"
     ],
     "icons": {
@@ -16,7 +17,7 @@
       "dist": "assets/build/images"
     },
     "images": {
-      "src": "assets/images/**/*.{png,gif,jpg,jpeg,svg}",
+      "src": "assets/images/**/*.{png,gif,jpg,jpeg,svg,mp4}",
       "dist": "assets/build/images"
     },
     "javascript": {
@@ -36,8 +37,7 @@
                 "@babel/preset-env", {
                   "targets": {
                     "browsers": [
-                      "> 0.25%",
-                      "ie >= 9"
+                      "> 0.25%"
                     ]
                   }
                 }

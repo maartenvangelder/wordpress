@@ -62,7 +62,7 @@ function get_body_class() {
     if (is_front_page()) {
         $classes[] = 'is-front-page';
     }
-    return implode($classes, ' ');
+    return implode(' ', $classes);
 }
 
 /**
@@ -82,4 +82,39 @@ function get_image_src($size, $post_id = null) {
 function get_image_alt($post_id = null) {
     $image_id = get_post_thumbnail_id($post_id);
     return get_post_meta($image_id, '_wp_attachment_image_alt', true);
+}
+
+/**
+* Get a value from $_POST / $_GET
+* if unavailable, take a default value
+*
+* @param string $key Value key
+* @param mixed $default_value (optional)
+* @return mixed Value
+*/
+function get_value($key, $default_value = false) {
+    if (!isset($key) || empty($key) || !is_string($key))
+        return false;
+
+    $ret = (isset($_POST[$key]) ? $_POST[$key] : (isset($_GET[$key]) ? $_GET[$key] : $default_value));
+
+    if (is_string($ret))
+        return stripslashes(urldecode(preg_replace('/((\%5C0+)|(\%00+))/i', '', urlencode($ret))));
+
+    return $ret;
+}
+
+/**
+ * Check if item in string
+ */
+function in_string( $needle, $str ) {
+    if (is_array($needle)) {
+        foreach($needle as $item) {
+            if (strpos( $str, $item ) !== false) {
+                return true;
+            }
+        }
+        return false;
+    }
+    return strpos( $str, $needle ) !== false;
 }

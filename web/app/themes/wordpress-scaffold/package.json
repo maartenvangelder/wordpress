@@ -14,16 +14,17 @@
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "@grrr/gulpfile": "^5.0.0"
+    "@grrr/gulpfile": "^6.0.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
+    "@braid/vue-formulate": "^2.4.3",
     "classlist-polyfill": "^1.2.0",
     "domready": "^1.0.8",
     "fg-loadjs": "^1.0.0",
+    "mixpanel-browser": "^2.41.0",
     "normalize.css": "^8.0.0",
-    "promise-polyfill": "^8.1.0",
     "svg4everybody": "^2.1.8",
-    "whatwg-fetch": "^3.0.0"
+    "vue": "^2.6.12"
   }
 }
